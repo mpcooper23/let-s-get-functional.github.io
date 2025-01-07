@@ -31,7 +31,12 @@ var _ = require('underbar');
  */
 
 var maleCount = function(array) {
-
+array.filter(costumer){
+    costumer => {
+        if(costumer === 'male')
+    return costumer
+}
+}
 };
 
 /** 
