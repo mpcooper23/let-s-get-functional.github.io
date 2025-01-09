@@ -31,7 +31,7 @@ var _ = require('underbar');
  */
 
 var maleCount = function(array) {
-array.filter(costumer => {
+return array.filter(costumer => {
         if(costumer === 'male')
     return costumer
 })
@@ -46,7 +46,12 @@ Constraints: use reduce
  * 
 */
 
-var femaleCount;
+var femaleCount = function(array){
+return array.reduce((acc, female) => {
+if(costumer.gender === female)
+return acc + 1
+}, 0)
+};
 
 /** 
  * 3: oldestCustomer
@@ -57,7 +62,15 @@ Constraints:
  * 
 */
 
-var oldestCustomer;
+var oldestCustomer = function(array) {
+    return array.filter(customer => {
+let output = ''
+    let oldest = 0
+    if(customer.age > oldest)
+    output += customer.age;
+return output
+    })
+}
 
 /** 
  * 4: youngestCustomer
@@ -68,18 +81,31 @@ Constraints:
  * 
 */
 
-var youngestCustomer;
+var youngestCustomer = function(array){
+return array.filter(customer => {
+    let output = '';
+    let youngest = 0;
+    if(customer.age < youngest)
+    output += customer.age;
+return output
+})
+}
 
 /** 
  * 5: averageBalance
 Objective: Find the average balance of all customers
 Input: Array
 Output: Number
-Constraints:
+Constraints: reduce
  * 
 */
 
-var averageBalance;
+var averageBalance = function(array){
+    const totalBalance = array.reduce((acc,customer) => {
+return acc += customer.balance;
+    }, 0);
+    return totalBalance / array.length;
+};
 
 /** 
  * 6: firstLetterCount
