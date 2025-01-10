@@ -112,11 +112,18 @@ return acc += customer.balance;
 Objective: Find how many customer's names begin with a given letter
 Input: Array, Letter
 Output: Number
-Constraints:
+Constraints: use reduce
  * 
 */
 
-var firstLetterCount;
+var firstLetterCount = (array, char) => {
+    return array.reduce((acc, current) => {customer => {
+        if(customer.name[0] === char){
+            acc += current
+        }
+    }
+    }, 0)
+};
 
 /** 
  * 7: friendFirstLetterCount
