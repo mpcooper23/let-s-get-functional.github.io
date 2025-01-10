@@ -32,8 +32,8 @@ var _ = require('underbar');
 
 var maleCount = function(array) {
 return array.filter(costumer => {
-        if(costumer === 'male')
-    return costumer
+        if(costumer.gender === 'male')
+    return true
 })
 };
 
@@ -48,7 +48,7 @@ Constraints: use reduce
 
 var femaleCount = function(array){
 return array.reduce((acc, female) => {
-if(costumer.gender === female)
+if(costumer.gender === 'female')
 return acc + 1
 }, 0)
 };
