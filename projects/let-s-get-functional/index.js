@@ -47,12 +47,14 @@ Constraints: use reduce
  * 
 */
 
-var femaleCount = function(array){
-return array.reduce((acc, female) => {
-if(costumer.gender === 'female')
-return acc + 1
-}, 0)
+const femaleCount = function(array){
+    return array.reduce((customer, female) => {
+if(customer.gender === female){
+    return customer + 1;
+}
+    }, 0)
 };
+
 
 /** 
  * 3: oldestCustomer
@@ -62,6 +64,8 @@ Output: String
 Constraints:
  * 
 */
+
+
 
 var oldestCustomer = function(array) {
     return array.filter(customer => {
